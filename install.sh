@@ -9,3 +9,6 @@ sudo pip3 install --upgrade neovim
 cp tmux.conf ~/.tmux.conf
 cp init.vim ~/.config/nvim/init.vim
 cp kitty.conf ~/.config/kitty/
+
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
