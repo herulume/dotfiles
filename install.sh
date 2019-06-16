@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo pacman -S git fzf neovim tmux kitty ttf-dejavu stylish-haskell
+sudo dnf install git fzf neovim tmux
 
 mkdir -p ~/.config/nvim/
 mkdir ~/.i3
