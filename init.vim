@@ -35,7 +35,7 @@ Plug 'nbouscal/vim-stylish-haskell'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'parsonsmatt/intero-neovim'
 Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
-
+Plug 'neomake/neomake'
 Plug 'slashmili/alchemist.vim'
 Plug 'elixir-lang/vim-elixir'
 

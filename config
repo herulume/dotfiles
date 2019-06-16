@@ -145,7 +145,14 @@ bar {
         position top
 }
 
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
+
 # Keyboard shortcuts to open apps
 bindsym $mod+b exec firefox
 exec --no-startup-id setxkbmap -option ctrl:nocaps
+exec --no-startup-id redshift
 exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
+exec --no-startup-id nm-applet
