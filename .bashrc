@@ -31,6 +31,13 @@ PS1="${RESET}${CYAN}\u@\h \W${NORMAL} \`${SELECT}\` ${YELLOW}>${NORMAL} "
 
 alias v='nvim'
 
+alias g='git'
+alias gst='git status'
+alias gp='git push'
+alias gl='git pull'
+alias gcl='git clone'
+alias gc='git commit'
+alias gaa='git add --all'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
