@@ -38,6 +38,14 @@ alias gl='git pull'
 alias gcl='git clone'
 alias gc='git commit'
 alias gaa='git add --all'
+alias gcb='git checkout -b'
+alias gco='git checkout'
+
+alias ls='ls --color=auto'
+alias grep='grep --colour=auto'
+alias egrep='egrep --colour=auto'
+alias fgrep='fgrep --colour=auto'
+
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
