@@ -6,4 +6,4 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # User specific environment and startup programs
-xinput set-prop 11 292 1
+xinput set-prop 11 291 1
