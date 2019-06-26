@@ -40,7 +40,7 @@ alias gc='git commit'
 alias gaa='git add --all'
 alias gcb='git checkout -b'
 alias gco='git checkout'
-
+alias god='git rebase -i --root'
 alias ls='ls --color=auto'
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
