@@ -5,7 +5,7 @@
   user = herulume
 [core]
   editor = nvim
-  excludesfile = ~/dev/dotfiles/git/gitignore_global
+  excludesfile = ~/dev/dotfiles/gitignore_global
 [commit]
   verbose = true
-  template = ~/dev/dotfiles/git/git-commit-msg-template
+  template = ~/dev/dotfiles/git-commit-msg-template

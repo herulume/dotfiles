@@ -32,6 +32,7 @@ PS1="${RESET}${CYAN}\u@\h \W${NORMAL} \`${SELECT}\` ${YELLOW}>${NORMAL} "
 alias v='nvim'
 
 alias g='git'
+alias ga='git add'
 alias gst='git status'
 alias gp='git push'
 alias gl='git pull'
@@ -45,7 +46,7 @@ alias ls='ls --color=auto'
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
-
+alias yari='xrandr --output HDMI1 --auto --above eDP'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
