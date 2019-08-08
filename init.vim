@@ -27,28 +27,20 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
-
-" languages
-Plug 'sheerun/vim-polyglot'
-
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
+Plug 'luochen1990/rainbow'
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+"languages
 Plug 'nbouscal/vim-stylish-haskell'
 Plug 'neovimhaskell/haskell-vim'
-Plug 'ndmitchell/ghcid', { 'rtp': 'plugins/nvim' }
-Plug 'neomake/neomake'
 Plug 'slashmili/alchemist.vim'
 Plug 'elixir-lang/vim-elixir'
+Plug 'tpope/vim-commentary'
 
-Plug 'tpope/vim-rails'
-Plug 'vim-ruby/vim-ruby'
-
-Plug 'vim-erlang/vim-erlang-runtime'
-Plug 'vim-erlang/vim-erlang-compiler'
-Plug 'vim-erlang/vim-erlang-omnicomplete'
-Plug 'vim-erlang/vim-erlang-tags'
-
-Plug 'mhartington/oceanic-next'
-
-
+" theme
+Plug 'dracula/vim'
+Plug 'segeljakt/vim-silicon'
 
 call plug#end()
 
@@ -141,10 +133,11 @@ set listchars+=nbsp:•
 " Theme
 syntax enable
 hi Normal guibg=NONE ctermbg=NONE
-colorscheme OceanicNext
+colors dracula
 
-
-let g:hardtime_default_on = 1
+nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
+"let g:hardtime_default_on = 1
 
 " fzf.vim
 let g:fzf_buffers_jump = 1
@@ -154,6 +147,7 @@ function! s:find_git_root()
 endfunction
 command! ProjectFiles execute 'Files' s:find_git_root()
 
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 """ ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"

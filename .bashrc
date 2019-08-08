@@ -46,8 +46,9 @@ alias ls='ls --color=auto'
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
-alias yari='xrandr --output HDMI1 --auto --above eDP'
-
+alias yari='xrandr --output HDMI1 --auto --above eDP1'
+alias us='sudo keyboardctl -l us'
+alias pt='sudo keyboardctl -l pt'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 . $HOME/.asdf/asdf.sh
