@@ -137,7 +137,8 @@ colors dracula
 
 nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
 nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
-"let g:hardtime_default_on = 1
+let g:hardtime_default_on = 1
+let g:hardtime_ignore_buffer_patterns = ["NERD.*" ]
 
 " fzf.vim
 let g:fzf_buffers_jump = 1
