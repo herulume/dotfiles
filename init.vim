@@ -8,6 +8,9 @@ endif
 " startup for vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'editorconfig/editorconfig-vim'
 
 " Vim HardTime
 Plug 'takac/vim-hardtime'
