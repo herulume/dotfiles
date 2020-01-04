@@ -1,15 +1,15 @@
 #!/bin/sh
 
-sudo pacman -S git feh redshit fzf neovim tmux i3-wm i3lock i3config dmenu
+sudo pacman -S git feh redshit fzf emacs i3-wm i3lock i3config dmenu
 
-mkdir -p ~/.config/nvim/
+
 mkdir ~/.i3
 mkdir -p ~/Pictures/Wallpapers
 
-sudo pip3 install --upgrade neovim
 
-cp tmux.conf ~/.tmux.conf
-cp init.vim ~/.config/nvim/init.vim
+
+
+
 cp kitty.conf ~/.config/kitty/
 cp config ~/.i3/config
 cp .bashrc ~/.bashrc
