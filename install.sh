@@ -1,6 +1,7 @@
 #!/bin/sh
 
-sudo pacman -S git feh redshift fzf emacs i3-wm i3lock dmenu 3status kitty otf-fira-code
+sudo pacman -Syu
+sudo pacman -S git feh redshift fzf emacs i3-wm i3lock dmenu 3status kitty otf-fira-code xorg-xinput arandr
 
 
 mkdir ~/.i3
