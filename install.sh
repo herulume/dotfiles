@@ -1,11 +1,11 @@
 #!/bin/sh
 
-sudo pacman -S git feh redshit fzf emacs i3-wm i3lock i3config dmenu
+sudo pacman -S git feh redshift fzf emacs i3-wm i3lock dmenu 3status kitty otf-fira-code
 
 
 mkdir ~/.i3
 mkdir -p ~/Pictures/Wallpapers
-
+mkdir ~/.config/kitty/
 
 
 
@@ -16,5 +16,4 @@ cp .bashrc ~/.bashrc
 cp .bash_profile ~/.bash_profile
 ln -sfT "$HOME/dev/dotfiles/gitconfig" "$HOME/.gitconfig"
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.2
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 curl -sSL https://get.haskellstack.org/ | sh
