@@ -13,7 +13,7 @@ set $mod Mod4
 new_window 1pixel
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:DejaVu Sans Mono 14
+font pango:DejaVu Sans Mono 15
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -31,7 +31,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec kitty
-bindsym $mod+Shift+Return exec kitty -e "tmux"
+bindsym $mod+Shift+Return exec emacs
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -154,7 +154,9 @@ bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
 
 # Keyboard shortcuts to open apps
 bindsym $mod+b exec firefox
+
 exec --no-startup-id setxkbmap -option ctrl:nocaps
 exec --no-startup-id redshift -l 38.9379:-9.6  -g 0.8 -m randr -v
 exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
 exec --no-startup-id nm-applet
+bindsym Print --release exec --no-startup-id scrot '%Y-%m-%d_$wx$h.png' -s -e 'xclip -sel clip -t image/png $f && rm $f'
