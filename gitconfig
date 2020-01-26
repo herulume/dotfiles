@@ -4,7 +4,7 @@
 [github]
   user = herulume
 [core]
-  editor = nvim
+  editor = vim
   excludesfile = ~/dev/dotfiles/gitignore_global
 [commit]
   verbose = true

@@ -2,8 +2,7 @@
 
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
-	. ~/.bashrc
+    . ~/.bashrc
 fi
 
 # User specific environment and startup programs
-xinput set-prop 11 291 1
