@@ -14,9 +14,9 @@ ln -sfT $HOME/dev/dotfiles/bashrc ~/.bashrc
 ln -sfT $HOME/dev/dotfiles/bash_profile ~/.bash_profile
 ln -sfT $HOME/dev/dotfiles/gitconfig ~/.gitconfig
 
-git submodule update --init
-ln -sfT $HOME/dev/dotfiles/emacs.d/init.el ~/.emacs.d/init.el
-ln -sfT $HOME/dev/dotfiles/emacs.d/config.org ~/.emacs.d/config.org
+git clone git@github.com:herulume/emacs.d.git ~/dev/emacs.d
+ln -sfT $HOME/dev/emacs.d/init.el ~/.emacs.d/init.el
+ln -sfT $HOME/dev/emacs.d/config.org ~/.emacs.d/config.org
 
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.2
 
