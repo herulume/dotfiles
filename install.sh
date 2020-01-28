@@ -1,7 +1,7 @@
 #!/bin/sh
 
 sudo pacman -Syu
-sudo pacman -S vim feh redshift fd emacs i3-wm i3lock dmenu i3status kitty otf-fira-code xorg-xinput arandr scrot cmake libtool ledger
+sudo pacman -S vim feh redshift fd emacs i3-wm i3lock dmenu i3status kitty otf-fira-code xorg-xinput arandr scrot cmake libtool ledger light
 
 mkdir ~/.i3
 mkdir -p ~/Pictures/Wallpapers
