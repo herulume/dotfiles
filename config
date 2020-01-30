@@ -65,9 +65,9 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+# bindsym $mod+s layout stacking
+# bindsym $mod+w layout tabbed
+# bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -154,10 +154,10 @@ bindsym XF86AudioMute exec pactl set-sink-mute 0 toggle # mute sound
 bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 # Keyboard shortcuts to open apps
-bindsym $mod+b exec firefox
-
+bindsym $mod+b exec brave
+bindsym $mod+e exec emacs
 exec --no-startup-id setxkbmap -option ctrl:nocaps
-exec --no-startup-id redshift -l 38.9379:-9.6  -g 0.8 -m randr -v
+exec --no-startup-id redshift -l 38.9379:-9.6 -m randr
 exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
 exec --no-startup-id nm-applet
 bindsym Print --release exec --no-startup-id scrot '%Y-%m-%d_$wx$h.png' -s -e 'xclip -sel clip -t image/png $f && rm $f'
