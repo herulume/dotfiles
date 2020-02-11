@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo pacman -Syu
-sudo pacman -S vim feh redshift fd emacs i3-wm i3lock dmenu i3status kitty otf-fira-code xorg-xinput arandr scrot cmake libtool ledger light
+sudo pacman -S vim feh redshift fd emacs i3-wm i3lock dmenu i3status kitty otf-fira-code xorg-xinput arandr scrot cmake libtool ledger light pulsemixer slock
 
 [ ! -d "~/.i3" ] && mkdir ~/.i3
 [ ! -d "~/Pictures/Wallpapers/" ] && mkdir -p ~/Pictures/Wallpapers
