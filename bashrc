@@ -72,6 +72,8 @@ alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
 alias us='sudo keyboardctl -l us'
 alias pt='sudo keyboardctl -l pt'
+alias tap='sh ~/dev/dotfiles/tapping.sh'
+
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
