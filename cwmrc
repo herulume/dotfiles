@@ -2,7 +2,7 @@
 # snapdist 4
 
 # Set menu font
-fontname "Fira mono:pixelsize=9:style=semicondensed"
+fontname "Fira mono:pixelsize=15:style=semicondensed"
 
 # Change Menu settings
 color menubg #222222 
@@ -14,5 +14,8 @@ color menubg #222222
 # M = meta (alt) 
 
 bind-key M-p dmenu_run
-bind-key SM-w surf
-bind-key M-b dmenustatus
+bind-key M-b brave
+
+bind Print "scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f /tmp/ && feh /tmp/$f'"
+bind XF86AudioRaiseVolume "mixer vol +5"
+bind XF86AudioLowerVolume "mixer vol -5"

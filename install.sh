@@ -1,7 +1,8 @@
 #!/bin/bash
 
 sudo pacman -Syu
-sudo pacman -S neovim feh dmenu i3status otf-fira-code xorg-xinput arandr cmake libtool ledger light pulsemixer slock xterm yay fzf
+sudo pacman -S neovim feh dmenu i3status otf-fira-code xorg-xinput arandr cmake libtool ledger
+light pulsemixer slock xterm yay fzf lemonbar
 yay -S cwm
 
 [ ! -d "~/Pictures/Wallpapers/" ] && mkdir -p ~/Pictures/Wallpapers
