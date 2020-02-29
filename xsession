@@ -14,7 +14,7 @@ feh --randomize --bg-fill $HOME/Pictures/Wallpapers/*
 xset b off
 
 # use caps lock as ctrl key
-setxkbmap -option rightalt:nocaps
+setxkbmap -option ctrl:nocaps
 
 # set time
 while true; do
@@ -22,5 +22,5 @@ while true; do
    sleep 5    # Update time every minute
 done &
 
-bash $HOME/dev/dotfiles/tapping.sh
+/bin/bash $HOME/dev/dotfiles/tapping.sh
 exec cwm

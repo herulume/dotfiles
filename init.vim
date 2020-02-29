@@ -7,7 +7,7 @@ endif
 
 " startup for vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
-
+Plug 'dracula/vim'
 " Vim HardTime
 Plug 'takac/vim-hardtime'
 
@@ -22,7 +22,7 @@ Plug 'luochen1990/rainbow'
 call plug#end()
 
 """""""
-colorscheme delek
+colorscheme dracula
 set clipboard=unnamed
 
 set number relativenumber
