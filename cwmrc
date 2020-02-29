@@ -1,0 +1,18 @@
+# Snap window 5 pixels
+# snapdist 4
+
+# Set menu font
+fontname "Fira mono:pixelsize=9:style=semicondensed"
+
+# Change Menu settings
+color menubg #222222 
+
+# Custom Binds
+# 4 = Super
+# S = shift
+# C = control
+# M = meta (alt) 
+
+bind-key M-p dmenu_run
+bind-key SM-w surf
+bind-key M-b dmenustatus

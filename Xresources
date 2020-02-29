@@ -1,0 +1,6 @@
+xterm*background: #222222
+xterm*foreground: #EEEEEE
+xterm*faceName: Fira Mono:size=9:antialias=true
+xterm*vt100*scrollBar: false
+xterm*termName: xterm-256color
+xterm*selectToClipboard: true
