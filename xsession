@@ -8,7 +8,7 @@ export LANG=en_US.UTF-8
 xrdb -merge $HOME/.Xresources
 
 # set your background
-feh --randomize --auto-zoom $HOME/Pictures/Wallpapers/*
+feh --randomize --bg-fill $HOME/Pictures/Wallpapers/*
 
 # disable system beep
 xset b off
