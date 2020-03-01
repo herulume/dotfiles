@@ -3,8 +3,11 @@
 sudo pacman -Syu
 sudo pacman -S neovim feh dmenu i3status otf-fira-code xorg-xinput arandr cmake libtool ledger
 tmux
-light pulsemixer slock rxvt-unicode yay fzf lemonbar
+light pulsemixer slock rxvt-unicode yay fzf
 yay -S cwm
+
+cp battery /usr/local/bin
+chmod +x /usr/local/bin
 
 [ ! -d "~/Pictures/Wallpapers/" ] && mkdir -p ~/Pictures/Wallpapers
 [ ! -d "~/.config/nvim/" ] && mkdir -p ~/.config/nvim
