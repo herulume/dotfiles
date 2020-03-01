@@ -2,7 +2,7 @@
 # snapdist 4
 
 # Set menu font
-fontname "Fira mono:pixelsize=15:style=semicondensed"
+fontname "Fira mono:pixelsize=17:style=semicondensed"
 
 # Change Menu settings
 color menubg #222222 
@@ -21,14 +21,15 @@ bind-key M-p dmenu_run
 bind-key M-b brave
 bind-key M-t "st -e tmux new-session"
 bind Print "scrot '%Y-%m-%d_$wx$h.png"
-#bind XF86AudioRaiseVolume "mixer vol +5"
-#bind XF86AudioLowerVolume "mixer vol -5"
+bind-key XF86AudioRaiseVolume "amixer -q sset Master 3%+"
+bind-key XF86AudioLowerVolume "amixer -q sset Master 3%-"
+bind-key XF86AudioMute "amixer -q sset Master toggle"
 
 autogroup 1 "urxvt"
 autogroup 1 "kitty"
 autogroup 1 "st"
 autogroup 1 "xterm"
 autogroup 1 "tmux"
-autogroup 2 "Navigator,Firefox"
-autogroup 2 "Navigator,Firefox-esr"
-autogroup 2 "Navigator,Brave"
+autogroup 2 "firefox"
+autogroup 2 "firefox-esr"
+autogroup 2 "brave"
