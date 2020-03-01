@@ -30,22 +30,23 @@ SELECT="if [ \$? = 0 ]; then echo \"${SMILEY}\"; else echo \"${FROWNY}\"; fi"
 PS1="${RESET}${CYAN}\u@\h \W${NORMAL} \`${SELECT}\` ${YELLOW}>${NORMAL} "
 
 alias g='git'
-alias ga='git add'
-alias gst='git status'
-alias gp='git push'
-alias gl='git pull'
-alias gcl='git clone'
-alias gc='git commit'
-alias gaa='git add --all'
-alias gcb='git checkout -b'
-alias gco='git checkout'
 alias god='git rebase -i --root'
+
 alias ls='ls --color=auto'
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
-alias v='nvim'
 
+alias v='nvim'
+alias p='sudo pacman'
+
+up() { cd $(eval printf '../'%.0s {1..$1}) && pwd; }
+cdls() { cd "$1"; ls;}
+alias treed="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
+howin() {
+where="$1"; shift
+IFS=+ curl "https://cht.sh/$where/$*"
+}
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 . $HOME/.asdf/asdf.sh

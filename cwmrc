@@ -13,18 +13,20 @@ color menubg #222222
 # C = control
 # M = meta (alt) 
 
-command term urxvt
+command term kitty
 command lock slock
 
 
 bind-key M-p dmenu_run
 bind-key M-b brave
-
-#bind Print "scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f /tmp/ && feh /tmp/$f'"
+bind-key M-t "st -e tmux new-session"
+bind Print "scrot '%Y-%m-%d_$wx$h.png"
 #bind XF86AudioRaiseVolume "mixer vol +5"
 #bind XF86AudioLowerVolume "mixer vol -5"
 
 autogroup 1 "urxvt"
+autogroup 1 "kitty"
+autogroup 1 "st"
 autogroup 1 "xterm"
 autogroup 1 "tmux"
 autogroup 2 "Navigator,Firefox"
