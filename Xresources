@@ -18,3 +18,4 @@ URxvt.color14:    #66D9EF
 URxvt.color7:     #666666
 URxvt.color15:    #FFFFFF
 URxvt.font:       xft:Fira Code:style=Regular:pixelsize=15
+URxvt.scrollBar: false
