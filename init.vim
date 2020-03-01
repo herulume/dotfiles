@@ -24,9 +24,11 @@ call plug#end()
 
 """""""
 colorscheme dracula
-set clipboard=unnamed
-
+set clipboard=unnamed,unnamedplus                " enable clipboard
+set encoding=utf8                                " enable utf8 support
 set number relativenumber
+set autoread " reload on external file changes
+set backspace=indent,eol,start                   " backspace behaviour
 set linebreak
 set showbreak=+++
 set textwidth=100
@@ -43,8 +45,7 @@ set shiftwidth=4
 set smartindent
 set smarttab
 set softtabstop=4
- 
-set backspace=indent,eol,start
+syntax on 
 
 let mapleader="\<space>"
 let maplocalleader=','
@@ -60,3 +61,7 @@ set colorcolumn=80
 let g:fzf_buffers_jump = 1
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
+" GO FAST
+set lazyredraw                                   " enable lazyredraw
+set nocursorline                                 " disable cursorline
+set ttyfast                                      " enable fast terminal connection
