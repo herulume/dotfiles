@@ -1,7 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 
 sudo pacman -Syu
-sudo pacman -S neovim feh dmenu i3status otf-fira-code xorg-xinput arandr cmake libtool ledger tmux xorg-xbacklight pulsemixer slock yay fzf kitty mpv
+sudo pacman -S neovim feh dmenu i3status otf-fira-code xorg-xinput arandr cmake libtool ledger tmux xorg-xbacklight pulsemixer slock yay fzf kitty mpv ctags
 yay -S cwm
 
 git clone git://git.suckless.org/st "$HOME/dev/st"
