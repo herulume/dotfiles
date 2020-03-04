@@ -1,9 +1,7 @@
-"sd vim-plug autoconfig if not already installed
-" need to clean this
-if empty(glob('~/.config/nvim/autoload/plug.vim'))
-  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall | nested source $MYVIMRC
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 " startup for vim-plug
@@ -40,13 +38,15 @@ Plug 'tpope/vim-rails'
 call plug#end()
 
 """""""
-set nocompatible 
-colorscheme dracula
-set clipboard=unnamed,unnamedplus                " enable clipboard
-set encoding=utf8                                " enable utf8 support
-set number relativenumber
+set nocompatible  " Welcome to this century
+colorscheme dracula 
+
+set clipboard=unnamed,unnamedplus " Clipboard
+set encoding=utf8 " utf8 support
+set number relativenumber " best config
 set autoread " reload on external file changes
-set backspace=indent,eol,start                   " backspace behaviour
+set backspace=indent,eol,start " backspace behaviour
+
 set linebreak
 set showbreak=+++
 set textwidth=100
@@ -84,6 +84,10 @@ command! MakeTags !ctags -R .
 set lazyredraw                                   " enable lazyredraw
 set nocursorline                                 " disable cursorline
 set ttyfast                                      " enable fast terminal connection
+
+
+
+
 
 """ CoC
 " TextEdit might fail if hidden is not set.
