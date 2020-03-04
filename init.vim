@@ -6,8 +6,9 @@ endif
 
 " startup for vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
+
 " Theme
-Plug 'dracula/vim'
+Plug 'morhetz/gruvbox'
 
 " Vim HardTime
 Plug 'takac/vim-hardtime'
@@ -35,11 +36,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 """ Ruby
 Plug 'tpope/vim-rails'
+
 call plug#end()
 
 """""""
 set nocompatible  " Welcome to this century
-colorscheme dracula 
+colorscheme gruvbox
 
 set clipboard=unnamed,unnamedplus " Clipboard
 set encoding=utf8 " utf8 support
@@ -63,14 +65,21 @@ set shiftwidth=4
 set smartindent
 set smarttab
 set softtabstop=4
-syntax enable 
+syntax enable
 set colorcolumn=80
+set list listchars=tab:»·,trail:·
 """
+
+autocmd BufWritePre * %s/\s\+$//e
 
 """ Rainbow
 let g:rainbow_active = 1
 
-""" builtin fzf 
+""" HardTime
+let g:hardtime_default_on = 1
+let g:hardtime_ignore_buffer_patterns = [ "NERD.*" ]
+
+""" builtin fzf
 set path+=**
 set wildmenu
 
