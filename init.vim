@@ -1,48 +1,46 @@
+let mapleader =","
+
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  autocmd VimEnter * PlugInstall --sync | source "$HOME/.config/nvim/init.vim"
 endif
 
 " startup for vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
 
-" Theme
+" Theme and stuff
 Plug 'morhetz/gruvbox'
-
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " Vim HardTime
 Plug 'takac/vim-hardtime'
-
 " Project tree
 Plug 'preservim/nerdtree'
-
 " Show git status on line
 Plug 'airblade/vim-gitgutter'
-
 " Git stuff on vim
 Plug 'tpope/vim-fugitive'
-
 " Rainbow stuff
 Plug 'luochen1990/rainbow'
-
 " Surround
 Plug 'tpope/vim-surround'
-
 " Comments
 Plug 'tpope/vim-commentary'
-
+" Writting
+Plug 'junegunn/goyo.vim'
 " Hell on earth
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 """ Ruby
 Plug 'tpope/vim-rails'
-
 call plug#end()
+
+
 
 """""""
 set nocompatible  " Welcome to this century
 colorscheme gruvbox
-
+let g:airline_theme='deus'
 set clipboard=unnamed,unnamedplus " Clipboard
 set encoding=utf8 " utf8 support
 set number relativenumber " best config
@@ -70,34 +68,28 @@ set colorcolumn=80
 set list listchars=tab:»·,trail:·
 """
 
+""" Trim white space
 autocmd BufWritePre * %s/\s\+$//e
-
 """ Rainbow
 let g:rainbow_active = 1
-
 """ HardTime
 let g:hardtime_default_on = 1
 let g:hardtime_ignore_buffer_patterns = [ "NERD.*" ]
-
 """ builtin fzf
 set path+=**
 set wildmenu
-
 """ ctags :D
 command! MakeTags !ctags -R .
 " - Use ^] to jump to tag under cursor
 " - Use g^] for ambiguous tags
 " - Use ^t to jump back up the tag stack
-
 """ GO FAST
-set lazyredraw                                   " enable lazyredraw
-set nocursorline                                 " disable cursorline
-set ttyfast                                      " enable fast terminal connection
-
-
-
-
-
+set lazyredraw
+set nocursorline
+set ttyfast
+" My maps
+map <leader>o :setlocal spell! spelllang=en_us<CR>
+map <leader>n :NERDTreeToggle<CR>
 """ CoC
 " TextEdit might fail if hidden is not set.
 set hidden
