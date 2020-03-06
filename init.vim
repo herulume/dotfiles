@@ -13,40 +13,50 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
 " Vim HardTime
 Plug 'takac/vim-hardtime'
+
 " Project tree
 Plug 'preservim/nerdtree'
-" Show git status on line
+
+" Git
 Plug 'airblade/vim-gitgutter'
-" Git stuff on vim
 Plug 'tpope/vim-fugitive'
-" Rainbow stuff
+
+" Rainbow ()
 Plug 'luochen1990/rainbow'
-" Surround
+
+" Surround (add some text obects)
 Plug 'tpope/vim-surround'
+
 " Comments
 Plug 'tpope/vim-commentary'
+
 " Writting
 Plug 'junegunn/goyo.vim'
+
 " Hell on earth
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-""" Ruby
+
+" Ruby
 Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
 
 
 """""""
 set nocompatible  " Welcome to this century
+
 colorscheme gruvbox
 let g:airline_theme='deus'
+
 set clipboard=unnamed,unnamedplus " Clipboard
 set encoding=utf8 " utf8 support
 set number relativenumber " best config
 set autoread " reload on external file changes
 set backspace=indent,eol,start " backspace behaviour
-
 set linebreak
 set showbreak=+++
 set textwidth=100
@@ -68,28 +78,47 @@ set colorcolumn=80
 set list listchars=tab:»·,trail:·
 """
 
+
 """ Trim white space
 autocmd BufWritePre * %s/\s\+$//e
+
+
 """ Rainbow
 let g:rainbow_active = 1
+
+
 """ HardTime
 let g:hardtime_default_on = 1
 let g:hardtime_ignore_buffer_patterns = [ "NERD.*" ]
+
+
 """ builtin fzf
 set path+=**
 set wildmenu
-""" ctags :D
+
+
+""" ctags
 command! MakeTags !ctags -R .
 " - Use ^] to jump to tag under cursor
 " - Use g^] for ambiguous tags
 " - Use ^t to jump back up the tag stack
+
+
 """ GO FAST
 set lazyredraw
 set nocursorline
 set ttyfast
+
+
 " My maps
 map <leader>o :setlocal spell! spelllang=en_us<CR>
 map <leader>n :NERDTreeToggle<CR>
+
+
+
+
+
+""" This was yanked from the github repo
 """ CoC
 " TextEdit might fail if hidden is not set.
 set hidden

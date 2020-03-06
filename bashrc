@@ -12,8 +12,6 @@ then
 fi
 export PATH
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
 
 # User specific aliases and functions
 RESET="\[\017\]"
@@ -25,8 +23,6 @@ CYAN="\[\033[0;34m\]"
 SMILEY="${WHITE}:)${NORMAL}"
 FROWNY="${RED}:(${NORMAL}"
 SELECT="if [ \$? = 0 ]; then echo \"${SMILEY}\"; else echo \"${FROWNY}\"; fi"
-
-# Throw it all together
 PS1="${RESET}${CYAN}\u@\h \W${NORMAL} \`${SELECT}\` ${YELLOW}>${NORMAL} "
 
 alias g='git'
@@ -41,18 +37,22 @@ alias v='nvim'
 alias p='sudo pacman'
 
 up() { cd $(eval printf '../'%.0s {1..$1}) && pwd; }
+
 cdls() { cd "$1"; ls;}
+
 alias treed="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
+
 howin() {
 where="$1"; shift
 IFS=+ curl "https://cht.sh/$where/$*"
 }
+
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 . $HOME/.asdf/asdf.sh
 
 . $HOME/.asdf/completions/asdf.bash
-
 
 
 extract () {
