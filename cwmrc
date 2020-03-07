@@ -5,13 +5,13 @@
 fontname "Fira mono:pixelsize=17:style=semicondensed"
 
 # Change Menu settings
-color menubg #222222 
+color menubg #222222
 
 # Custom Binds
 # 4 = Super
 # S = shift
 # C = control
-# M = meta (alt) 
+# M = meta (alt)
 
 command term kitty
 command lock slock
@@ -19,8 +19,8 @@ command lock slock
 
 bind-key M-p dmenu_run
 bind-key M-b brave
-bind-key M-t "st -e tmux new-session"
-bind Print "scrot '%Y-%m-%d_$wx$h.png"
+bind-key M-t "kitty -e tmux new-session"
+bind-key Print "scrot '%Y-%m-%d_$wx$h.png"
 bind-key XF86AudioRaiseVolume "amixer -q sset Master 3%+"
 bind-key XF86AudioLowerVolume "amixer -q sset Master 3%-"
 bind-key XF86AudioMute "amixer -q sset Master toggle"

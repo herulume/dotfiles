@@ -42,6 +42,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Ruby
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
+
+" Latex
+Plug 'lervag/vimtex'
+Plug 'sirver/ultisnips'
 call plug#end()
 
 
@@ -110,12 +114,23 @@ set nocursorline
 set ttyfast
 
 
+"" Latex
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
+
+
+""" Snippets
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "my_snippets"]
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+
 " My maps
 map <leader>o :setlocal spell! spelllang=en_us<CR>
 map <leader>n :NERDTreeToggle<CR>
-
-
-
 
 
 """ This was yanked from the github repo
