@@ -48,7 +48,7 @@ IFS=+ curl "https://cht.sh/$where/$*"
 }
 
 calou() {
-    kill $(ps aux | grep $1 | awk '{print $2}')
+    killall $1
 }
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
