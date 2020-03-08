@@ -27,13 +27,13 @@ Plug 'tpope/vim-fugitive'
 " Rainbow ()
 Plug 'luochen1990/rainbow'
 
-" Surround (add some text obects)
+" Surround (add some text objects)
 Plug 'tpope/vim-surround'
 
 " Comments
 Plug 'tpope/vim-commentary'
 
-" Writting
+" Writing
 Plug 'junegunn/goyo.vim'
 
 " Hell on earth
@@ -43,9 +43,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 
-" Latex
-Plug 'lervag/vimtex'
-Plug 'sirver/ultisnips'
 call plug#end()
 
 
@@ -112,21 +109,6 @@ command! MakeTags !ctags -R .
 set lazyredraw
 set nocursorline
 set ttyfast
-
-
-"" Latex
-let g:tex_flavor='latex'
-let g:vimtex_view_method='zathura'
-let g:vimtex_quickfix_mode=0
-set conceallevel=1
-let g:tex_conceal='abdmg'
-
-
-""" Snippets
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "my_snippets"]
-let g:UltiSnipsExpandTrigger = '<tab>'
-let g:UltiSnipsJumpForwardTrigger = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 " My maps
 map <leader>o :setlocal spell! spelllang=en_us<CR>
