@@ -47,6 +47,9 @@ where="$1"; shift
 IFS=+ curl "https://cht.sh/$where/$*"
 }
 
+calou() {
+    kill $(ps aux | grep $1 | awk '{print $2}')
+}
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
