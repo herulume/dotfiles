@@ -8,6 +8,8 @@ sudo cp battery /usr/local/bin
 sudo chmod +x /usr/local/bin/battery
 sudo cp webcam /usr/local/bin
 sudo chmod +x /usr/local/bin/webcam
+sudo cp hac /usr/local/bin
+sudo chmod +x /usr/local/bin/hac
 
 [ ! -d "$HOME/Pictures/Wallpapers/" ]     && mkdir -p "$HOME/Pictures/Wallpapers"
 [ ! -d "$HOME/.config/nvim/my_snippets" ] && mkdir -p "$HOME/.config/nvim/my_snippets"

@@ -9,6 +9,7 @@ endif
 " startup for vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'segeljakt/vim-silicon'
 " Theme and stuff
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
@@ -43,6 +44,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-rails'
 Plug 'vim-ruby/vim-ruby'
 
+" Elm
+Plug 'andys8/vim-elm-syntax'
 call plug#end()
 
 

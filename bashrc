@@ -10,6 +10,7 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
+PATH="$HOME/.cargo/bin:$PATH"
 export PATH
 
 
@@ -36,6 +37,9 @@ alias fgrep='fgrep --colour=auto'
 alias v='nvim'
 alias p='sudo pacman'
 
+alias calou='amixer set Capture nocap'
+alias falar='amixer set Capture cap'
+
 up() { cd $(eval printf '../'%.0s {1..$1}) && pwd; }
 
 cdls() { cd "$1"; ls;}
@@ -47,7 +51,7 @@ where="$1"; shift
 IFS=+ curl "https://cht.sh/$where/$*"
 }
 
-calou() {
+morre() {
     killall $1
 }
 
