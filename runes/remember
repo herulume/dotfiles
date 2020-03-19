@@ -1,5 +1,4 @@
 #!/bin/sh
-#   remember--An easy command-line-based reminder pad
 
 rememberfile="$HOME/.remember"
 

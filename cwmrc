@@ -20,7 +20,7 @@ command lock slock
 bind-key M-p dmenu_run
 bind-key M-b brave
 bind-key M-t "kitty -e tmux new-session"
-bind-key Print "scrot '%Y-%m-%d_$wx$h.png"
+bind-key Print "scrot %Y-%m-%d_$wx$h.png"
 bind-key XF86AudioRaiseVolume "hac up 5"
 bind-key XF86AudioLowerVolume "hac down 5"
 bind-key XF86AudioMute "hac toggle"

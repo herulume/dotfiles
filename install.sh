@@ -6,10 +6,10 @@ yay -S cwm
 
 sudo cp battery /usr/local/bin
 sudo chmod +x /usr/local/bin/battery
-sudo cp webcam /usr/local/bin
-sudo chmod +x /usr/local/bin/webcam
-sudo cp hac /usr/local/bin
-sudo chmod +x /usr/local/bin/hac
+
+[ ! -d "$HOME/.local/bin" ] && mkdir "$HOME/.local/bin"
+cp ./runes/* "$HOME/.local/bin"
+chmod +x "$HOME/.local/bin/"*
 
 [ ! -d "$HOME/Pictures/Wallpapers/" ]     && mkdir -p "$HOME/Pictures/Wallpapers"
 [ ! -d "$HOME/.config/nvim/my_snippets" ] && mkdir -p "$HOME/.config/nvim/my_snippets"
@@ -25,4 +25,4 @@ ln -sfT "$HOME/dev/dotfiles/init.vim"                 "$HOME/.config/nvim/init.v
 ln -sfT "$HOME/dev/dotfiles/my_snippets/tex.snippets" "$HOME/.config/nvim/my_snippets/tex.snippets"
 ln -sfT "$HOME/dev/dotfiles/tmux.conf"                "$HOME/.tmux.conf"
 
-git clone https://github.com/asdf-vm/asdf.git "$HOME/.asdf" --branch v0.7.2
+[ ! -d "$HOME/.asdf" ] && git clone https://github.com/asdf-vm/asdf.git "$HOME/.asdf" --branch v0.7.2

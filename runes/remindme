@@ -1,6 +1,4 @@
 #!/bin/sh
-# remindme--Searches a data file for matching lines or, if no
-#   argument is specified, shows the entire contents of the data file.
 
 rememberfile="$HOME/.remember"
 
