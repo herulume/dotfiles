@@ -9,33 +9,17 @@ endif
 " startup for vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'segeljakt/vim-silicon'
 " Theme and stuff
-Plug 'morhetz/gruvbox'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-" Vim HardTime
-Plug 'takac/vim-hardtime'
+Plug 'dracula/vim'
 
 " Project tree
 Plug 'preservim/nerdtree'
 
-" Git
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-
 " Rainbow ()
 Plug 'luochen1990/rainbow'
 
-" Surround (add some text objects)
-Plug 'tpope/vim-surround'
-
 " Comments
 Plug 'tpope/vim-commentary'
-
-" Writing
-Plug 'junegunn/goyo.vim'
 
 " Hell on earth
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -46,6 +30,9 @@ Plug 'vim-ruby/vim-ruby'
 
 " Elm
 Plug 'andys8/vim-elm-syntax'
+
+" Haskell
+Plug 'neovimhaskell/haskell-vim'
 call plug#end()
 
 
@@ -53,7 +40,7 @@ call plug#end()
 """""""
 set nocompatible  " Welcome to this century
 
-colorscheme gruvbox
+colorscheme dracula
 let g:airline_theme='deus'
 
 set clipboard=unnamed,unnamedplus " Clipboard
@@ -260,3 +247,15 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+" haskell-vim
+let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
+let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
+let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
+let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
+let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
+let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
+let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
+"
+" vim-commentary
+map <leader>gc <Plug>Commentary

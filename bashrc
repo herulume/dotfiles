@@ -10,8 +10,8 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
-PATH="$HOME/.cargo/bin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
+JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 export PATH
 
 
@@ -47,9 +47,8 @@ cdls() { cd "$1"; ls;}
 
 alias treed="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
 
-howin() {
-where="$1"; shift
-IFS=+ curl "https://cht.sh/$where/$*"
+runOwnN() {
+    unshare -c --fork --pid --mount-proc "$1"
 }
 
 morre() {
