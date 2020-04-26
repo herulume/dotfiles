@@ -3,9 +3,6 @@
 sudo pacman -Syu
 sudo pacman -S neovim feh dmenu i3status otf-fira-code xorg-xinput arandr cmake libtool tmux xorg-xbacklight slock fzf kitty mpv brave
 
-sudo cp battery /usr/local/bin
-sudo chmod +x /usr/local/bin/battery
-
 # Dev
 [ ! -d "$HOME/dev" ] && mkdir "$HOME/dev"
 
@@ -16,6 +13,7 @@ chmod +x "$HOME/.local/bin/"*
 
 # Where to save wallpapers
 [ ! -d "$HOME/Pictures/Wallpapers/" ]     && mkdir -p "$HOME/Pictures/Wallpapers"
+cp "./wallpaper.jpg" "$HOME/Pictures/Wallpapers/"
 
 # Kitty config
 [ ! -d "$HOME/.config/kitty/" ]           && mkdir -p "$HOME/.config/kitty"
