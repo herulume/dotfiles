@@ -5,10 +5,10 @@ export LANG=en_US.UTF-8
 . ./.bashrc
 
 # load Xresources file
-xrdb -merge $HOME/.Xresources
+# xrdb -merge $HOME/.Xresources
 
 # set your background
-feh --randomize --bg-fill $HOME/Pictures/Wallpapers/*
+# feh --randomize --bg-fill $HOME/Pictures/Wallpapers/*
 
 # disable system beep
 xset b off
@@ -17,4 +17,4 @@ xset b off
 setxkbmap -option ctrl:nocaps
 
 /bin/bash $HOME/dev/dotfiles/tapping.sh
-exec cwm
+exec xfce
