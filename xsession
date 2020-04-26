@@ -16,5 +16,5 @@ xset b off
 # use caps lock as ctrl key
 setxkbmap -option ctrl:nocaps
 
-/bin/bash $HOME/dev/dotfiles/tapping.sh
-exec xfce
+# /bin/bash $HOME/dev/dotfiles/tapping.sh
+# exec xfce

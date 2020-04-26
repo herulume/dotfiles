@@ -8,7 +8,7 @@ sudo pacman -S neovim feh dmenu i3status otf-fira-code xorg-xinput arandr cmake 
 
 # My runes
 [ ! -d "$HOME/.local/bin" ] && mkdir "$HOME/.local/bin"
-cp ./runes/* "$HOME/.local/bin"
+cp "./runes/"* "$HOME/.local/bin"
 chmod +x "$HOME/.local/bin/"*
 
 # Where to save wallpapers
@@ -45,4 +45,4 @@ cd "$HOME/dev/aura"
 stack install -- aura
 cd -
 
-#ln -sfT "$HOME/dev/dotfiles/xsession"                 "$HOME/.xsession"
+ln -sfT "$HOME/dev/dotfiles/xsession"                 "$HOME/.xsession"

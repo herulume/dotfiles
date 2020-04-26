@@ -9,6 +9,9 @@ endif
 " startup for vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
 
+" Tmux
+Plug 'christoomey/vim-tmux-navigator'
+
 " Theme and stuff
 Plug 'dracula/vim'
 
