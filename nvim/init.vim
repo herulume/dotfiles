@@ -27,10 +27,6 @@ Plug 'tpope/vim-commentary'
 " Hell on earth
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Ruby
-Plug 'tpope/vim-rails'
-Plug 'vim-ruby/vim-ruby'
-
 " Elm
 Plug 'andys8/vim-elm-syntax'
 
@@ -40,62 +36,38 @@ call plug#end()
 
 
 
-"""""""
-set nocompatible  " Welcome to this century
-
+""""""" General
+set nocompatible  " Not needed
 colorscheme dracula
-let g:airline_theme='deus'
+syntax enable
 
 set clipboard=unnamed,unnamedplus " Clipboard
 set encoding=utf8 " utf8 support
-set number relativenumber " best config
+set number relativenumber " relative line numbers
 set autoread " reload on external file changes
 set backspace=indent,eol,start " backspace behaviour
-set linebreak
-set showbreak=+++
-set textwidth=100
-set showmatch
-set visualbell
-set hlsearch
-set smartcase
-set ignorecase
-set incsearch
-set ruler
+set visualbell " no bips
+set hlsearch " highlight search
+set incsearch " search with '/' and enable 'n' as next
 set autoindent
 set expandtab
 set shiftwidth=4
 set smartindent
 set smarttab
 set softtabstop=4
-syntax enable
 set colorcolumn=80
 set list listchars=tab:»·,trail:·
 """
 
-
 """ Trim white space
 autocmd BufWritePre * %s/\s\+$//e
-
 
 """ Rainbow
 let g:rainbow_active = 1
 
-
-""" HardTime
-let g:hardtime_default_on = 1
-let g:hardtime_ignore_buffer_patterns = [ "NERD.*" ]
-
-
-""" builtin fzf
+""" builtin fzf (:find)
 set path+=**
 set wildmenu
-
-
-""" ctags
-command! MakeTags !ctags -R .
-" - Use ^] to jump to tag under cursor
-" - Use g^] for ambiguous tags
-" - Use ^t to jump back up the tag stack
 
 
 """ GO FAST
@@ -103,9 +75,21 @@ set lazyredraw
 set nocursorline
 set ttyfast
 
-" My maps
-map <leader>o :setlocal spell! spelllang=en_us<CR>
+" nerdtree
 map <leader>n :NERDTreeToggle<CR>
+
+" haskell-vim
+let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
+let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
+let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
+let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
+let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
+let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
+let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
+
+" vim-commentary
+map <leader>gc <Plug>Commentary
+
 
 
 """ This was yanked from the github repo
@@ -251,14 +235,3 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
-" haskell-vim
-let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
-let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
-let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
-let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
-let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
-let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
-let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
-"
-" vim-commentary
-map <leader>gc <Plug>Commentary

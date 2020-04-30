@@ -1,12 +1,13 @@
 {
   "suggest.noselect": true,
-  "suggest.floatEnable": false,
+  "suggest.floatEnable": true,
   "diagnostic.messageTarget": "echo",
   "signature.target": "echo",
   "coc.preferences.hoverTarget": "echo",
   "languageserver": {
     "haskell": {
       "command": "hie-wrapper",
+      "args": ["--lsp"],
       "rootPatterns": [".stack.yaml", "cabal.config", "package.yaml"],
       "filetypes": ["hs", "lhs", "haskell"],
       "initializationOptions": {},
@@ -17,6 +18,6 @@
           "completionSnippetsOn": true
         }
       }
-    },
+    }
   }
 }

@@ -7,3 +7,5 @@ fi
 
 # User specific environment and startup programs
 
+# opam configuration
+test -r /home/herulume/.opam/opam-init/init.sh && . /home/herulume/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
