@@ -17,15 +17,17 @@ cp "./wallpaper.jpg" "$HOME/Pictures/Wallpapers/"
 
 # Kitty config
 [ ! -d "$HOME/.config/kitty/" ]           && mkdir -p "$HOME/.config/kitty"
-ln -sfT "$HOME/dev/dotfiles/kitty.conf"               "$HOME/.config/kitty/kitty.conf"
+ln -sfT "$HOME/dev/dotfiles/kitty/kitty.conf"               "$HOME/.config/kitty/kitty.conf"
 
-# Bash and tmux
-ln -sfT "$HOME/dev/dotfiles/bashrc"                   "$HOME/.bashrc"
-ln -sfT "$HOME/dev/dotfiles/bash_profile"             "$HOME/.bash_profile"
-ln -sfT "$HOME/dev/dotfiles/tmux.conf"                "$HOME/.tmux.conf"
+# Bash
+ln -sfT "$HOME/dev/dotfiles/bash/bashrc"                   "$HOME/.bashrc"
+ln -sfT "$HOME/dev/dotfiles/bash/bash_profile"             "$HOME/.bash_profile"
+
+# Tmux
+ln -sfT "$HOME/dev/dotfiles/tmux/tmux.conf"                "$HOME/.tmux.conf"
 
 # Git
-ln -sfT "$HOME/dev/dotfiles/gitconfig"                "$HOME/.gitconfig"
+ln -sfT "$HOME/dev/dotfiles/git/gitconfig"                "$HOME/.gitconfig"
 
 # Neovim
 ln -sfT "$HOME/dev/dotfiles/nvim/init.vim"                 "$HOME/.config/nvim/init.vim"
