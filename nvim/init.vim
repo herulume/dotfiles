@@ -1,4 +1,4 @@
-let mapleader =","
+let mapleader ="\<Space>"
 
 if empty(glob('~/.vim/autoload/plug.vim'))
     curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
@@ -8,56 +8,50 @@ endif
 
 " startup for vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
-
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'
-
-" Theme and stuff
-Plug 'dracula/vim'
-
+" Theme
+Plug 'ajmwagar/vim-deus'
 " Project tree
 Plug 'preservim/nerdtree'
-
 " Rainbow ()
 Plug 'luochen1990/rainbow'
-
 " Comments
 Plug 'tpope/vim-commentary'
-
 " Hell on earth
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" Elm
-Plug 'andys8/vim-elm-syntax'
-
 " Haskell
 Plug 'neovimhaskell/haskell-vim'
 call plug#end()
 
+""" General
+set nocompatible "Not needed
+colorscheme deus "Set theme
+set background=dark "Tell vim what the background color looks like
+syntax enable "Enable syntax
+set clipboard=unnamed,unnamedplus "Clipboard
+set encoding=utf8 "utf8 support
+set t_Co=256 "Term colors
+set number relativenumber "Relative line numbers
+set autoread "Reload on external file changes
+set backspace=indent,eol,start "Backspace behaviour
+set visualbell "No bips
+set hlsearch "Highlight search
+set incsearch "Search with '/' and enable 'n' as next
+set autoindent "Good auto indent
+set smartindent "Smart indenting
+set colorcolumn=80 "Vertical line
+"set cursorline "Enable highlighting of the current line
+set list listchars=tab:»·,trail:· "Symbols to show
+set nowrap "Display long lines as just one line
+set ruler "Show the cursor position all the time
+set mouse=a "Enable your mouse
 
-
-""""""" General
-set nocompatible  " Not needed
-colorscheme dracula
-syntax enable
-
-set clipboard=unnamed,unnamedplus " Clipboard
-set encoding=utf8 " utf8 support
-set number relativenumber " relative line numbers
-set autoread " reload on external file changes
-set backspace=indent,eol,start " backspace behaviour
-set visualbell " no bips
-set hlsearch " highlight search
-set incsearch " search with '/' and enable 'n' as next
-set autoindent
-set expandtab
-set shiftwidth=4
-set smartindent
-set smarttab
-set softtabstop=4
-set colorcolumn=80
-set list listchars=tab:»·,trail:·
-"""
+""" Tabs and spaces
+set expandtab "Tabs to spaces
+set shiftwidth=4 "Tab = 4 spaces
+set smarttab "Smart tabs
+set softtabstop=4 "Same value as shiftwidth
 
 """ Trim white space
 autocmd BufWritePre * %s/\s\+$//e
@@ -69,11 +63,13 @@ let g:rainbow_active = 1
 set path+=**
 set wildmenu
 
-
 """ GO FAST
 set lazyredraw
 set nocursorline
 set ttyfast
+
+" You can't stop me
+cmap w!! w !sudo tee %
 
 " nerdtree
 map <leader>n :NERDTreeToggle<CR>
@@ -90,6 +86,11 @@ let g:haskell_backpack = 1                " to enable highlighting of backpack k
 " vim-commentary
 map <leader>gc <Plug>Commentary
 
+
+
+"""""""""""""""""""
+" Here be dragons "
+"""""""""""""""""""
 
 
 """ This was yanked from the github repo
