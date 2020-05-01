@@ -6,7 +6,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync
 endif
 
-" startup for vim-plug
 call plug#begin('~/.local/share/nvim/plugged')
 " Tmux
 Plug 'christoomey/vim-tmux-navigator'
@@ -41,17 +40,15 @@ set incsearch "Search with '/' and enable 'n' as next
 set autoindent "Good auto indent
 set smartindent "Smart indenting
 set colorcolumn=80 "Vertical line
-"set cursorline "Enable highlighting of the current line
 set list listchars=tab:»·,trail:· "Symbols to show
 set nowrap "Display long lines as just one line
 set ruler "Show the cursor position all the time
-set mouse=a "Enable your mouse
 
 """ Tabs and spaces
 set expandtab "Tabs to spaces
 set shiftwidth=4 "Tab = 4 spaces
 set smarttab "Smart tabs
-set softtabstop=4 "Same value as shiftwidth
+set softtabstop=4 "Same value as shift width
 
 """ Trim white space
 autocmd BufWritePre * %s/\s\+$//e
@@ -235,4 +232,3 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
-
