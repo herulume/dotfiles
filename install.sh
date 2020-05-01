@@ -38,7 +38,7 @@ ln -sfT "$HOME/dev/dotfiles/nvim/init.vim"          "$HOME/.config/nvim/init.vim
 ln -sfT "$HOME/dev/dotfiles/nvim/coc-settings.json" "$HOME/.config/nvim/coc-settings.json"
 
 # asdf
-[ ! -d "$HOME/.asdf" ] && git clone https://github.com/asdf-vm/asdf.git "$HOME/.asdf" --branch v0.7.2
+[ ! -d "$HOME/.asdf" ] && git clone https://github.com/asdf-vm/asdf.git "$HOME/.asdf" --branch v0.7.8
 
 # Haskell stack
 curl -sSL https://get.haskellstack.org/ | sh
