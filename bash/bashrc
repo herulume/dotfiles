@@ -37,17 +37,13 @@ alias fgrep='fgrep --colour=auto'
 
 alias v='nvim'
 alias p='sudo pacman'
-
-alias calou='amixer set Capture nocap'
-alias falar='amixer set Capture cap'
+alias a='sudo aura'
 
 up() { cd $(eval printf '../'%.0s {1..$1}) && pwd; }
 
 cdls() { cd "$1"; ls;}
 
-alias treed="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
-
-runOwnN() {
+runInOwnNamespace() {
     unshare -c --fork --pid --mount-proc "$1"
 }
 
