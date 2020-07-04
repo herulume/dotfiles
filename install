@@ -1,7 +1,8 @@
 #!/bin/sh
 
 sudo pacman -Syu
-sudo pacman -S neovim ed feh otf-fira-code xorg-xinput arandr cmake libtool tmux xorg-xbacklight slock fzf redshift rofi rxvt-unicode
+# Use neovim nightly build
+sudo pacman -S ed feh otf-fira-code xorg-xinput arandr cmake libtool tmux xorg-xbacklight slock fzf redshift rofi rxvt-unicode yay
 
 # Dev
 [ ! -d "$HOME/dev" ] && mkdir "$HOME/dev"
@@ -34,11 +35,3 @@ ln -sfT "$HOME/dev/dotfiles/nvim/init.vim" "$HOME/.config/nvim/init.vim"
 
 # Haskell stack
 curl -sSL https://get.haskellstack.org/ | sh
-
-# Aura
-cd "$HOME/dev/"
-git clone https://github.com/fosskers/aura.git
-cd -
-cd "$HOME/dev/aura"
-stack install -- aura
-cd -
