@@ -27,6 +27,9 @@ FROWNY="${RED}:(${NORMAL}"
 SELECT="if [ \$? = 0 ]; then echo \"${SMILEY}\"; else echo \"${FROWNY}\"; fi"
 PS1="${RESET}${CYAN}\u@\h \W${NORMAL} \`${SELECT}\` ${YELLOW}>${NORMAL} "
 
+alias ghci='stack ghci'
+alias ghc='stack ghc -- '
+
 alias g='git'
 alias god='git rebase -i --root'
 

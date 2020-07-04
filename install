@@ -1,0 +1,44 @@
+#!/bin/sh
+
+sudo pacman -Syu
+sudo pacman -S neovim ed feh otf-fira-code xorg-xinput arandr cmake libtool tmux xorg-xbacklight slock fzf redshift rofi rxvt-unicode
+
+# Dev
+[ ! -d "$HOME/dev" ] && mkdir "$HOME/dev"
+
+# xmonad
+[ ! -d "$HOME/.xmonad/" ] && mkdir -p "$HOME/.xmonad"
+ln -sfT "$HOME/dev/dotfiles/xmonad/xmonad.hs" "$HOME/.xmonad/xmonad.hs"
+ln -sfT "$HOME/dev/dotfiles/xmonad/.xmobarrc" "$HOME/.xmonad/.xmobarrc"
+
+# Where to save wallpapers
+[ ! -d "$HOME/Pictures/Wallpapers/" ] && mkdir -p "$HOME/Pictures/Wallpapers"
+cp "./wallpaper.jpg"                              "$HOME/Pictures/Wallpapers/"
+
+# Xdefaults
+ln -sfT "$HOME/dev/dotfiles/Xdefaults" "$HOME/.Xdefaults"
+
+# Bash
+ln -sfT "$HOME/dev/dotfiles/bash/bashrc"       "$HOME/.bashrc"
+ln -sfT "$HOME/dev/dotfiles/bash/bash_profile" "$HOME/.bash_profile"
+
+# Tmux
+ln -sfT "$HOME/dev/dotfiles/tmux/tmux.conf" "$HOME/.tmux.conf"
+
+# Git
+ln -sfT "$HOME/dev/dotfiles/git/gitconfig" "$HOME/.gitconfig"
+
+# Neovim
+[ ! -d "$HOME/.config/nvim" ] && mkdir -p "$HOME/.config/nvim"
+ln -sfT "$HOME/dev/dotfiles/nvim/init.vim" "$HOME/.config/nvim/init.vim"
+
+# Haskell stack
+curl -sSL https://get.haskellstack.org/ | sh
+
+# Aura
+cd "$HOME/dev/"
+git clone https://github.com/fosskers/aura.git
+cd -
+cd "$HOME/dev/aura"
+stack install -- aura
+cd -
