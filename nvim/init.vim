@@ -11,13 +11,16 @@ Plug 'luochen1990/rainbow'
 Plug 'tpope/vim-commentary'
 " Haskell
 Plug 'neovimhaskell/haskell-vim'
+" Vimwiki
+Plug 'vimwiki/vimwiki'
 call plug#end()
 
 """ General
 set nocompatible "Not needed
 colorscheme deus "Set theme
 set background=dark "Tell vim what the background color looks like
-syntax enable "Enable syntax
+syntax on "Enable syntax
+filetype plugin on
 set clipboard=unnamed,unnamedplus "Clipboard
 set encoding=utf8 "utf8 support
 set t_Co=256 "Term colors
@@ -72,3 +75,12 @@ let g:haskell_backpack = 1                " to enable highlighting of backpack k
 
 " vim-commentary
 map <leader>gc <Plug>Commentary
+
+" vimwiki
+map <leader>tf :VimwikiSearchTags \(\h\<Bar>[-]\)\{2,20}<CR>
+let wiki = {}
+let wiki.path = '~/vimwiki'
+let wiki.path_html = '~/vimwiki/html'
+let wiki.syntax = 'default'
+let wiki.ext = '.wiki'
+let g:vimwiki_list = [wiki]

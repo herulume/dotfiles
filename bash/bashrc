@@ -27,9 +27,6 @@ FROWNY="${RED}:(${NORMAL}"
 SELECT="if [ \$? = 0 ]; then echo \"${SMILEY}\"; else echo \"${FROWNY}\"; fi"
 PS1="${RESET}${CYAN}\u@\h \W${NORMAL} \`${SELECT}\` ${YELLOW}>${NORMAL} "
 
-alias ghci='stack ghci'
-alias ghc='stack ghc -- '
-
 alias g='git'
 alias god='git rebase -i --root'
 
@@ -37,10 +34,12 @@ alias ls='ls --color=auto'
 alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
+alias rm='rm -i'
+alias mv='mv -i'
 
 alias v='nvim'
+alias wiki='nvim -c VimwikiIndex'
 alias p='sudo pacman'
-alias a='sudo aura'
 
 up() { cd $(eval printf '../'%.0s {1..$1}) && pwd; }
 
