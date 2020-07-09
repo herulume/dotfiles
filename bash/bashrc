@@ -53,11 +53,6 @@ morre() {
     killall $1
 }
 
-. $HOME/.asdf/asdf.sh
-
-. $HOME/.asdf/completions/asdf.bash
-
-
 extract () {
    if [ -f $1 ] ; then
        case $1 in
