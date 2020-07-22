@@ -13,6 +13,8 @@ Plug 'tpope/vim-commentary'
 Plug 'neovimhaskell/haskell-vim'
 " Vimwiki
 Plug 'vimwiki/vimwiki'
+" CoC
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 """ General
@@ -79,8 +81,11 @@ map <leader>gc <Plug>Commentary
 " vimwiki
 map <leader>tf :VimwikiSearchTags \(\h\<Bar>[-]\)\{2,20}<CR>
 let wiki = {}
-let wiki.path = '~/vimwiki'
-let wiki.path_html = '~/vimwiki/html'
+let wiki.path = '~/dev/master-thesis/zettelkasten/'
+let wiki.path_html = '~/dev/master-thesis/zettelkasten/html/'
 let wiki.syntax = 'default'
 let wiki.ext = '.wiki'
 let g:vimwiki_list = [wiki]
+
+
+source $HOME/.config/nvim/cocconfig.vim

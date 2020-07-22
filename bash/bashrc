@@ -11,8 +11,12 @@ then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 PATH="$HOME/.local/bin:$PATH"
+GOPATH="$HOME/go"
 JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 export PATH
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
 
 
 # User specific aliases and functions
@@ -39,6 +43,7 @@ alias mv='mv -i'
 
 alias v='nvim'
 alias wiki='nvim -c VimwikiIndex'
+alias wikihtml='firefox ~/dev/master-thesis/zettelkasten/html/index.html'
 alias p='sudo pacman'
 
 up() { cd $(eval printf '../'%.0s {1..$1}) && pwd; }
