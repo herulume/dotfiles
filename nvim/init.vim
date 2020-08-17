@@ -87,5 +87,8 @@ let wiki.syntax = 'default'
 let wiki.ext = '.wiki'
 let g:vimwiki_list = [wiki]
 
+" escape terminal mode with <Esc>
+tnoremap <Esc> <C-\><C-n>
+
 
 source $HOME/.config/nvim/cocconfig.vim

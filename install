@@ -23,9 +23,6 @@ ln -sfT "$HOME/dev/dotfiles/Xdefaults" "$HOME/.Xdefaults"
 ln -sfT "$HOME/dev/dotfiles/bash/bashrc"       "$HOME/.bashrc"
 ln -sfT "$HOME/dev/dotfiles/bash/bash_profile" "$HOME/.bash_profile"
 
-# Tmux
-ln -sfT "$HOME/dev/dotfiles/tmux/tmux.conf" "$HOME/.tmux.conf"
-
 # Git
 ln -sfT "$HOME/dev/dotfiles/git/gitconfig" "$HOME/.gitconfig"
 
