@@ -28,6 +28,7 @@ ln -sfT "$HOME/dev/dotfiles/git/gitconfig" "$HOME/.gitconfig"
 
 # Neovim
 [ ! -d "$HOME/.config/nvim" ] && mkdir -p "$HOME/.config/nvim"
+[ ! -d "$HOME/.config/nvim/undodir" ] && mkdir -p "$HOME/.config/nvim/undodir"
 ln -sfT "$HOME/dev/dotfiles/nvim/init.vim" "$HOME/.config/nvim/init.vim"
 ln -sfT "$HOME/dev/dotfiles/nvim/cocconfig.vim" "$HOME/.config/nvim/cocconfig.vim"
 ln -sfT "$HOME/dev/dotfiles/nvim/coc-settings.json" "$HOME/.config/nvim/coc-settings.json"

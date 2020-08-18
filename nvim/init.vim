@@ -45,6 +45,10 @@ set shiftwidth=4 "Tab = 4 spaces
 set smarttab "Smart tabs
 set softtabstop=4 "Same value as shift width
 
+""" Persistent undo
+set undofile
+set undodir=~/.config/nvim/undodir
+
 """ Trim white space
 autocmd BufWritePre * %s/\s\+$//e
 
@@ -74,6 +78,7 @@ let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
 let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
 let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
 let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
+
 
 " vim-commentary
 map <leader>gc <Plug>Commentary

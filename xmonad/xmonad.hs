@@ -12,7 +12,7 @@ import XMonad.Util.SpawnOnce
 main :: IO ()
 main = xmonad $ (docks myConfig)
 
-myConfig = ewmh def { terminal = "urxvt"
+myConfig = ewmh def { terminal = "urxvtc"
                     , modMask = mod4Mask
                     , borderWidth = 0
                     , focusFollowsMouse = True
@@ -48,6 +48,7 @@ myStartupHook = do
   spawn "xset b off"
   spawnOnce "xmobar ~/.xmonad/.xmobarrc"
   spawnOnce "tapping"
+  spawnOnce "urxvtd -q -o -f"
 
 
 myLayoutHook = mySpacing $ avoidStruts (ResizableTall 1 (3/100) (1/2) [] ||| Full)

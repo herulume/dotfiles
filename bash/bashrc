@@ -10,9 +10,13 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
+
+GOPATH="$HOME/go"
+GOBIN="$HOME/go/bin"
+
 PATH="$HOME/.local/bin:$PATH"
 PATH="$HOME/go/bin:$PATH"
-GOPATH="$HOME/go"
+
 JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 export PATH
 
