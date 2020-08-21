@@ -36,19 +36,23 @@ myKeys = [ ("M-r", spawn "rofi -show run")
          , ("M-x", spawn "pkill xmobar")
          , ("M-a", sendMessage MirrorShrink)
          , ("M-z", sendMessage MirrorExpand)
+         , ("C-e e", spawn "emacsclient -c -a ''")                            -- start emacs
+         , ("C-e b", spawn "emacsclient -c -a '' --eval '(ibuffer)'")         -- list emacs buffers
+         , ("C-e d", spawn "emacsclient -c -a '' --eval '(dired nil)'")       -- dired emacs file manager
          ]
 
 myStartupHook :: X ()
 myStartupHook = do
-  spawn "xsetroot -cursor_name left_ptr"
-  spawn "feh --bg-scale ~/Pictures/Wallpapers/wallpaper.jpg"
-  spawn "msm_notifier"
-  spawn "start-pulseaudio-x11"
-  spawn "setxkbmap -option ctrl:nocaps"
-  spawn "xset b off"
+  spawnOnce "xsetroot -cursor_name left_ptr"
+  spawnOnce "feh --bg-scale ~/Pictures/Wallpapers/wallpaper.jpg"
+  spawnOnce "msm_notifier"
+  spawnOnce "start-pulseaudio-x11"
+  spawnOnce "setxkbmap -option ctrl:nocaps"
+  spawnOnce "xset b off"
   spawnOnce "xmobar ~/.xmonad/.xmobarrc"
   spawnOnce "tapping"
   spawnOnce "urxvtd -q -o -f"
+  spawnOnce "emacs --daemon"
 
 
 myLayoutHook = mySpacing $ avoidStruts (ResizableTall 1 (3/100) (1/2) [] ||| Full)

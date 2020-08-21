@@ -15,6 +15,8 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'vimwiki/vimwiki'
 " CoC
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" alloy
+Plug 'runoshun/vim-alloy'
 call plug#end()
 
 """ General
