@@ -23,8 +23,8 @@ myConfig = ewmh def { terminal = "urxvtc"
 myKeys :: [(String, X ())]
 myKeys = [ ("M-r", spawn "rofi -show run")
          , ("M-w", spawn "rofi -show window")
-         , ("<XF86MonBrightnessDown>", spawn "xbacklight -inc 5")
-         , ("<XF86MonBrightnessUp>", spawn "xbacklight -dec 5")
+         , ("<XF86MonBrightnessDown>", spawn "xbacklight -dec 5")
+         , ("<XF86MonBrightnessUp>", spawn "xbacklight -inc 5")
          , ("<XF86AudioLowerVolume>", spawn "amixer set Master 5%-")
          , ("<XF86AudioRaiseVolume>", spawn "amixer set Master 5%+")
          , ("<XF86AudioMute>", spawn "amixer set Master toggle")
