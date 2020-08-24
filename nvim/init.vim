@@ -2,7 +2,7 @@ let mapleader ="\<Space>"
 
 call plug#begin('~/.local/share/nvim/plugged')
 " Theme
-Plug 'ajmwagar/vim-deus'
+Plug 'dracula/vim', { 'as': 'dracula' }
 " Project tree
 Plug 'preservim/nerdtree'
 " Rainbow ()
@@ -21,9 +21,8 @@ call plug#end()
 
 """ General
 set nocompatible "Not needed
-colorscheme deus "Set theme
-set background=dark "Tell vim what the background color looks like
-syntax on "Enable syntax
+colorscheme dracula
+syntax enable "Enable syntax
 filetype plugin on
 set clipboard=unnamed,unnamedplus "Clipboard
 set encoding=utf8 "utf8 support
