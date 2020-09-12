@@ -161,9 +161,9 @@ myKeys = [ ("M-r", spawn "rofi -show run")
         , ("M-C-k", sendMessage MirrorExpand)               -- Exoand vert window width
 
 
-         , ("C-e e", spawn "emacsclient -c -a ''")                            -- start emacs
-         , ("C-e b", spawn "emacsclient -c -a '' --eval '(ibuffer)'")         -- list emacs buffers
-         , ("C-e d", spawn "emacsclient -c -a '' --eval '(dired nil)'")       -- dired emacs file manager
+         , ("M-e e", spawn "emacsclient -c -a ''")                            -- start emacs
+         , ("M-e b", spawn "emacsclient -c -a '' --eval '(ibuffer)'")         -- list emacs buffers
+         , ("M-e d", spawn "emacsclient -c -a '' --eval '(dired nil)'")       -- dired emacs file manager
          ]
 
 mySpacing :: Integer -> l a -> XMonad.Layout.LayoutModifier.ModifiedLayout Spacing l a
@@ -179,38 +179,13 @@ tall     = renamed [Replace "tall"]
            $ limitWindows 12
            $ mySpacing 8
            $ ResizableTall 1 (3/100) (1/2) []
-magnify  = renamed [Replace "magnify"]
-           $ magnifier
-           $ limitWindows 12
-           $ mySpacing 8
-           $ ResizableTall 1 (3/100) (1/2) []
-monocle  = renamed [Replace "monocle"]
-           $ limitWindows 20 Full
 floats   = renamed [Replace "floats"]
            $ limitWindows 20 simplestFloat
-grid     = renamed [Replace "grid"]
-           $ limitWindows 12
-           $ mySpacing 8
-           $ mkToggle (single MIRROR)
-           $ Grid (16/10)
-spirals  = renamed [Replace "spirals"]
-           $ mySpacing' 8
-           $ spiral (6/7)
-threeCol = renamed [Replace "threeCol"]
-           $ limitWindows 7
-           $ mySpacing' 4
-           $ ThreeCol 1 (3/100) (1/2)
-threeRow = renamed [Replace "threeRow"]
-           $ limitWindows 7
-           $ mySpacing' 4
-           -- Mirror takes a layout and rotates it by 90 degrees.
-           -- So we are applying Mirror to the ThreeCol layout.
-           $ Mirror
-           $ ThreeCol 1 (3/100) (1/2)
 tabs     = renamed [Replace "tabs"]
            -- I cannot add spacing to this layout because it will
            -- add spacing between window and tabs which looks bad.
            $ tabbed shrinkText myTabConfig
+
   where
     myTabConfig = def { fontName            = "xft:Fira Code Font:regular:pixelsize=11"
                       , activeColor         = "#292d3e"
@@ -227,14 +202,7 @@ myLayoutHook = avoidStruts $ mouseResize $ windowArrange $ T.toggleLayouts float
              where
                -- I've commented out the layouts I don't use.
                myDefaultLayout =     noBorders tall
-                                 -- ||| magnify
-                                 -- ||| noBorders monocle
-                                 -- ||| floats
-                                 -- ||| grid
                                  ||| noBorders tabs
-                                 -- ||| spirals
-                                 -- ||| threeCol
-                                 -- ||| threeRow
 
 myConfig = ewmh def { terminal = myTerminal
                     , modMask = myModMask
