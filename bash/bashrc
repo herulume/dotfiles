@@ -50,6 +50,7 @@ alias v='nvim'
 alias wiki='nvim -c VimwikiIndex'
 alias wikihtml='firefox ~/dev/master-thesis/zettelkasten/html/index.html'
 alias p='sudo pacman'
+alias doom='~/.emacs.d/bin/doom'
 
 alias alloy='java -jar ~/.local/alloy.jar &'
 
